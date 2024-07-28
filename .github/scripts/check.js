@@ -3,7 +3,7 @@ const path = require('path');
 
 function checkDirectories() {
   const directories = fs.readdirSync('.').filter(file => 
-    fs.statSync(file).isDirectory() && file !== '.github'
+    fs.statSync(file).isDirectory() && file !== '.github' && file !== '.git'
   );
 
   for (const dir of directories) {
