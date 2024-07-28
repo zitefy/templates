@@ -1,0 +1,21 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  push:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install tools
+      run: sudo apt-get install sshpass rsync
+    
+    - name: Write changes to server
+      run: |
+        sshpass -p ${{ secrets.VPS_PASSWORD }} rsync -avz --exclude='.github/' -e 'ssh -o StrictHostKeyChecking=no' ./ vishalds@${{ secrets.VPS_HOST }}:/home/vishalds/.zitefy/templates/
+      env:
+        VPS_PASSWORD: ${{ secrets.VPS_PASSWORD }}
