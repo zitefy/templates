@@ -1,0 +1,122 @@
+body {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(102,198,255,1) 74%);
+    color: white;
+    font-family: "Jura", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0px;
+    overflow: hidden;
+}
+
+h3 {
+    margin-block: 0;
+}
+
+.body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow-y: hidden;
+}
+
+.small {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small .socials {
+    width: 100%; 
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials .social {
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.small .info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small .info h1 {
+    margin-block: 0.2em;
+}
+
+.dp {
+    height: 15vw;
+    width: 15vw;
+    border-radius: 200px;
+}
+
+.large {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10vh 10vw 10vh 0;
+    overflow-y: auto;
+}
+
+.social:hover {
+    background-color: aliceblue;
+}
+
+.social:hover svg path {
+    fill: #b55926;
+}
+
+/* mobile screens */
+@media only screen and (max-width: 640px) {
+    body {
+        overflow: auto;
+    }
+
+    .body {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        overflow-y: visible;
+    }
+
+    .small {
+        padding: 40px;
+    }
+
+    .dp {
+        height: 40vw;
+        width: 40vw;
+    }
+    
+    .large {
+        padding: 0 10vw 2vh 10vw;
+        text-align: center;
+        overflow-y: visible;
+    }
+}
+
+/* big phones & tablets */
+@media only screen and (max-width: 768px) {}
+
+/* tablets & 13 inch laptops */
+@media only screen and (max-width: 1024px) {}
+
+/* laptops */
+@media only screen and (max-width: 1280px) {}
+
+/* <17" displays */
+@media only screen and (max-width: 1536px) {}
