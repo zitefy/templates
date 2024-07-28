@@ -135,10 +135,10 @@ Although not mandatory, it'd be cool for you to know the algorithm with which zi
         if it is, the value of the corresponding `link` is set as the value of the element's `src` attribute. Otherwise, it's set as the value of the element's `href` attribute.
     * Then, it checks to see if an element has it's `data-display` attribute set to `true`. If so, it inserts the content of `value` as text inside the element as it's `innerHTML`.
     * For a given element, if there is no value for `link` & `value`, it sets the CSS of that to `display: none;`
-    * Additionally, it sets the values of SEO tags to the values of `name`, `image` & `bio` in the selectors respectively. This won't concern you if you leave the SEO tags intact in the base template. If you do require changing them, check out [scripts/builder.js]() in the server repo for a more comprehensive understanding of the algorithm.
+    * Additionally, it sets the values of SEO tags to the values of `name`, `image` & `bio` in the selectors respectively. This won't concern you if you leave the SEO tags intact in the base template. If you do require changing them, check out [scripts/builder.js](https://github.com/zitefy/server/blob/main/scripts/builder.js) in the server repo for a more comprehensive understanding of the algorithm.
 4. Finally, it changes the document title to the value of the `name` selector if available or defaults to the `username` selector. If both are unavailable, the title stays the same.
 
 Hopefully, now you have a more thorough understanding of the internal process. Keeping this in mind might help you discover new ways of building templates that we never could have dreamt of! If you find any part of these docs confusing or complicated, feel free to open an issue or [DM me on telegram](https://t.me/vishalds), we're always happy to help.
 
 ## Contributing
-Thanks for looking to contribute to this repository! Please refer to the [contribution guide]()
+Thanks for looking to contribute to this repository! Please refer to the [contribution guide](https://github.com/zitefy/templates/blob/main/CONTRIBUTING.md)
